@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<p>테스트 페이지입니다.</p>
+	<div>
+		<form action="/download" enctype="multipart/form-data">
+			<input type="submit" name = "fileName" value="test">
+		</form>
+		<h1>파일 업로드</h1>
+		<form method="post" action="/upload" enctype="multipart/form-data">
+			<input type="file" name = "uploadfile" multiple="multiple">
+			<input type="submit">
+		</form>
+	</div>    
+</body>
+</html>
