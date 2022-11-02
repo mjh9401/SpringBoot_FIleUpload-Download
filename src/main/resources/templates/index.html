@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,6 +20,31 @@
 			<input type="file" name = "uploadfile" multiple="multiple">
 			<input type="submit">
 		</form>
-	</div>    
+		<h1>체크박스 테스트</h1>
+		<form method="post" action="/check">
+			<input type="checkbox" name="check">
+			<input type="submit">
+		</form>
+		<h1>DatePicker 테스트</h1>
+		<form method="get" action="/date">
+			<input name = "date" class = "datepicker">
+			<input type="submit">
+		</form>
+	</div>
+	<script>
+		$.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd',
+            prevText:'이번 달',
+            nextText:'다음 달',
+            monthNames:['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            showMonthAfterYear: true,
+            yearSuffix: '년',
+            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']
+        });
+	
+		$('.datepicker').datepicker();
+	</script>    
 </body>
 </html>

@@ -50,4 +50,16 @@ public class HomeController {
 		response.getOutputStream().close();
 	}
 	
+	// 체크박스 테스트
+	@PostMapping("/check")
+	public void check(boolean check) {
+		System.out.println("체크박스 상태값 : "+check);
+	}
+	
+	//DatePicker 테스트
+	@GetMapping("/date")
+	public void date(String date) {
+		System.out.println("넘어온 날짜 값 : "+date);
+	}
+	
 }
